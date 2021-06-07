@@ -1,0 +1,11 @@
+
+//copy it and past in the products table for inserting this data on the phpmyadmin.
+
+INSERT INTO `products` (`id`, `name`, `desc`, `price`, `rrp`, `quantity`, `img`, `date_added`) VALUES
+(1, 'product 1', '<p>Unique watch made with stainless steel, ideal for those that prefer interative watches.</p>\r\n<h3>Features</h3>\r\n<ul>\r\n<li>Powered by Android with built-in apps.</li>\r\n<li>Adjustable to fit most.</li>\r\n<li>Long battery life, continuous wear for up to 2 days.</li>\r\n<li>Lightweight design, comfort on your wrist.</li>\r\n</ul>', '29.99', '0.00', 10, '3.jpg', '2019-03-13 17:55:22'),
+(2, 'product 2', '', '14.99', '19.99', 34, '4.jpg', '2019-03-13 18:52:49'),
+(3, 'product 3', '', '19.99', '0.00', 23, '5.jpg', '2019-03-13 18:47:56'),
+(4, 'product 4', '', '69.99', '0.00', 7, '6.jpg', '2019-03-13 17:42:04'),
+(5, 'product 5', '', '14.99', '19.99', 34, '7.jpg', '2019-03-13 18:52:49'),
+(6, 'product 6', '', '19.99', '0.00', 23, '8.jpg', '2019-03-13 18:47:56'),
+(7, 'product 7', '', '69.99', '0.00', 7, '9.jpg', '2019-03-13 17:42:04');

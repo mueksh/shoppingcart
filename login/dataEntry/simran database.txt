@@ -1,0 +1,67 @@
+
+//creating database "shoppingcart" and creating signin table. 
+
+
+
+C:\xamp\mysql\bin>mysql -u root -p -u localhost
+Enter password:
+ERROR 1045 (28000): Access denied for user 'localhost'@'localhost' (using password: NO)
+
+C:\xamp\mysql\bin>mysql -u (your username) -p(your password) -h localhost
+Enter password:(your password)
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 88
+Server version: 10.4.18-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| phpmyadmin         |
+| test               |
++--------------------+
+6 rows in set (0.001 sec)
+
+MariaDB [(none)]> create database shoppingcart;
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| phpmyadmin         |
+| shoppingcart           |
+| test               |
++--------------------+
+6 rows in set (0.001 sec)
+MariaDB [(none)]> use shoppingcart;
+Database changed
+MariaDB [shoppingcart]>create table sigin(id int(255) not null auto_increment primary key,name varchar(255) not null,userName varchar(255) not null,
+title varchar(255),address varchar(255),city varchar(255),state varchar(255),country varchar(255),postCode int(255),phone int(255),password varchar(255));
+MariaDB [shoppingcart]> desc signin;
++----------+--------------+------+-----+---------+----------------+
+| Field    | Type         | Null | Key | Default | Extra          |
++----------+--------------+------+-----+---------+----------------+
+| id       | int(255)     | NO   | PRI | NULL    | auto_increment |
+| name     | varchar(255) | NO   |     | NULL    |                |
+| userName | varchar(255) | YES  |     | NULL    |                |
+| title    | varchar(255) | YES  |     | NULL    |                |
+| address  | varchar(255) | YES  |     | NULL    |                |
+| city     | varchar(255) | YES  |     | NULL    |                |
+| state    | varchar(255) | YES  |     | NULL    |                |
+| country  | varchar(255) | YES  |     | NULL    |                |
+| postCode | int(255)     | YES  |     | NULL    |                |
+| phone    | int(255)     | YES  |     | NULL    |                |
+| password | varchar(255) | NO   |     | NULL    |                |
++----------+--------------+------+-----+---------+----------------+
+11 rows in set (0.011 sec)
+
+MariaDB [shoppingcart]>
